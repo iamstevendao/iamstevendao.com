@@ -4,7 +4,11 @@
 #
 version: 2
 jobs:
-  build:
+  build-test-deploy:
+    branches:
+      only: 
+        - master
+  
     docker:
       # specify the version you desire here
       - image: circleci/node:8.6
@@ -46,28 +50,3 @@ jobs:
       - run:
           name: Deploying
           command: sh deploy.sh
-
-#   deploy-prod:
-#     docker:
-#       - image: circleci/node:8.6
-#     working_directory: /tmp/my-project  
-#     steps:
-#       - checkout
-#       - run:
-#           name: Deploying
-#           command: sh deploy.sh
-
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: master 
-      # - deploy-prod:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: master 
