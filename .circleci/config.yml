@@ -16,10 +16,6 @@ jobs:
 
     working_directory: ~/repo
 
-    branches:
-      ignore:
-        - gh-pages
-
     steps:
       - checkout
 
@@ -62,7 +58,10 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build
+      - build:
+        filters:
+          branches:
+            only: master 
       - deploy-prod:
           requires:
             - build
