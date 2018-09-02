@@ -41,6 +41,10 @@ jobs:
           name: unit tests
           command: npm run test:unit
 
-      - run: 
-          name: e2e tests
-          command: npm run test:e2e
+      # - run: 
+      #     name: e2e tests
+      #     command: npm run test:e2e
+      
+      - run:
+          name: deploy
+          command: sh deploy.sh
