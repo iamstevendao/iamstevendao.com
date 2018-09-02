@@ -50,6 +50,7 @@ jobs:
       - image: circleci/node:8.6
     working_directory: /tmp/my-project  
     steps:
+      - checkout
       - run:
           name: Deploying
           command: sh deploy.sh
