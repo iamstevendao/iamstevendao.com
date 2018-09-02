@@ -4,11 +4,6 @@
 #
 version: 2
 
-general:
-  branches:
-    only:
-      - master
-
 jobs:
   build:
     docker:
