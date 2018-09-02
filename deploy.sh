@@ -11,6 +11,8 @@ cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
+git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+git config --global user.name "$GH_NAME" > /dev/null 2>&1
 
 git init
 git add -A
