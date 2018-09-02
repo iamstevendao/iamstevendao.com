@@ -14,6 +14,8 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
+    working_directory: ~/repo
+
     branches:
       ignore:
         - gh-pages
@@ -46,7 +48,12 @@ jobs:
       # - run: 
       #     name: e2e tests
       #     command: npm run test:e2e
-      
+
+  deploy-prod:
+    docker:
+      - image: circleci/node:8.6
+    working_directory: /tmp/my-project  
+    steps:
       - run:
           name: Deploying
           command: sh deploy.sh
@@ -56,3 +63,9 @@ workflows:
   build-deploy:
     jobs:
       - build
+      - deploy-prod:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master 
