@@ -26,7 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run: 
+          name: Installing dependencies
+          command: npm install
 
       - save_cache:
           paths:
@@ -34,11 +36,11 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: 
-          name: code linting
+          name: Linting Code
           command: npm run lint
 
       - run: 
-          name: unit tests
+          name: Running unit tests
           command: npm run test:unit
 
       # - run: 
@@ -46,5 +48,5 @@ jobs:
       #     command: npm run test:e2e
       
       - run:
-          name: deploy
+          name: Deploying
           command: sh deploy.sh
