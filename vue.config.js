@@ -4,8 +4,8 @@ module.exports = {
     // Add file loader to copy config file to dist
     config
       .module
-      .rule('yml')
-      .test(/\.yml$/)
+      .rule('config')
+      .test(/\.(txt|yml)$/)
       .use('file')
       .loader('file-loader')
       .options({
