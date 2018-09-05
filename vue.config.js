@@ -1,7 +1,5 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
-    ? '/iamstevendao.com/'
-    : '/',
+  baseUrl: '/',
   chainWebpack: (config) => {
     // Add file loader to copy config file to dist
     config
