@@ -2,7 +2,7 @@
 
 describe('Home', () => {
   it('Visits the app root url', () => {
-    cy.visit('/')
+    cy.visit('https://oshcexpress.com/')
     cy.contains('h1', 'Hi, I\'m Steven Dao.')
   })
 })

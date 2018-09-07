@@ -44,6 +44,9 @@ jobs:
           name: Running e2e tests
           command: npm run test:e2e:ci
 
+      - store_artifacts:
+          path: tests/e2e/screenshots
+
       - run:
           name: Deploying
           command: sh deploy.sh
