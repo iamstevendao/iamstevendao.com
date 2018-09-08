@@ -2,6 +2,9 @@
 
 <template>
   <div class="home">
+    <img src="../assets/avatar.jpg"
+         style="border-radius: 50%; width: 25%; min-width: 80px;"
+         alt="Steven Dao's avatar">
     <h1>Hi, I'm Steven Dao.</h1>
     <p>
       I'm building webs with my friends at
@@ -9,7 +12,7 @@
          target="_blank"
          rel="noopener">EducationLink</a>.
     </p>
-    <p>I spend my free time watching dog, cat<br> and working on open source projects.</p>
+    <p>I develop, maintain open source projects <br> and am a bit obsessed with dogs and cats.</p>
     <h3>Ping me at</h3>
     <ul>
       <li>
