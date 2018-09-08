@@ -19,6 +19,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
+            - ~/.cache
           key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
         
       - run: 
