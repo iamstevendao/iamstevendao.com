@@ -2,9 +2,11 @@
 
 <template>
   <div class="home">
-    <img src="../assets/avatar.jpg"
-         style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px;"
-         alt="Steven Dao's avatar">
+    <a href="#">
+      <img src="../assets/avatar.jpg"
+           style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px;"
+           alt="Steven Dao's avatar">
+    </a>
     <h1>Hi, I'm Steven Dao.</h1>
     <p>
       I'm building webs with my friends at
