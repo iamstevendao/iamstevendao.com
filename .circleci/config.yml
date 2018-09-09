@@ -32,7 +32,7 @@ jobs:
 
       - run: 
           name: Running e2e tests
-          command: npm run test:e2e:ci
+          command: npm run test:e2e -- --headless
 
       - store_artifacts:
           path: tests/e2e/screenshots
