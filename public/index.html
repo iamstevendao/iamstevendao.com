@@ -24,8 +24,9 @@
         content="width=device-width,initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
         content="font-src 'self' data:; default-src 'unsafe-eval' ws: http://*:8080/ http://localhost:* https:">
-  <meta name="referrer"
-        content="none-when-downgrade" />
+  <!-- https://infosec.mozilla.org/guidelines/web_security#referrer-policy-->
+  <meta http-equiv="Referrer-Policy"
+        content="no-referrer, strict-origin-when-cross-origin">
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color"
         content="#b02000">
