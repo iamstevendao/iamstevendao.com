@@ -8,7 +8,7 @@ module.exports = {
     config
       .module
       .rule('config')
-      .test(/\.(txt|yml)$/)
+      .test(/\.(txt|yml|xml)$/)
       .use('file')
       .loader('file-loader')
       .options({
