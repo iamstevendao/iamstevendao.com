@@ -1,5 +1,8 @@
 module.exports = {
   baseUrl: '/',
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   chainWebpack: (config) => {
     // Add file loader to copy config file to dist
     config
