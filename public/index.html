@@ -23,10 +23,14 @@
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-        content="font-src 'self' data:; default-src 'unsafe-eval' ws: http://*:8080/ http://localhost:* https:">
+        content="font-src 'self' data:; default-src 'unsafe-eval' ws: http://*:8080/ http://localhost:* https:; frame-ancestors 'self'">
   <!-- https://infosec.mozilla.org/guidelines/web_security#referrer-policy-->
   <meta http-equiv="Referrer-Policy"
         content="no-referrer, strict-origin-when-cross-origin">
+  <meta http-equiv="X-XSS-Protection"
+        content="1; mode=block">
+  <meta http-equiv="X-Frame-Options"
+        content="SAMEORIGIN">
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color"
         content="#b02000">
