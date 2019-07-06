@@ -12,7 +12,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
 
-      - run: 
+      - run:
           name: Installing dependencies
           command: npm install
 
@@ -22,15 +22,15 @@ jobs:
             - ~/.cache
           key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
         
-      - run: 
+      - run:
           name: Linting Code
           command: npm run lint
 
-      - run: 
+      - run:
           name: Running unit tests
           command: npm run test:unit
 
-      - run: 
+      - run:
           name: Running e2e tests
           command: npm run test:e2e -- --headless
 
