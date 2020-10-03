@@ -24,9 +24,6 @@
       <li>
         <a href="https://github.com/iamstevendao" target="_blank" rel="noopener">Github</a>
       </li>
-      <li>
-        <a href="https://twitter.com/iamstevendao" target="_blank" rel="noopener">Twitter</a>
-      </li>
     </ul>
   </div>
 </template>
