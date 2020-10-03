@@ -5,8 +5,8 @@
     <a href="#">
       <img
         src="../assets/avatar.jpg"
-        style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px;"
-        alt="Steven Dao's avatar"
+        style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px"
+        alt="Steven Dao"
       />
     </a>
     <h1>Hi, I'm Steven Dao.</h1>
