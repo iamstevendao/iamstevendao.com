@@ -19,12 +19,10 @@
       I create, maintain open source projects <br />
       and am a bit obsessed with dogs and cats.
     </p>
-    <h3>Find me at</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/iamstevendao" target="_blank" rel="noopener">Github</a>
-      </li>
-    </ul>
+    <div style="margin-top: 20px">
+      <strong>Find me at</strong>
+      <a href="https://github.com/iamstevendao" rel="noopener" style="display: block;margin-top: 5px;">Github</a>
+    </div>
   </div>
 </template>
 
