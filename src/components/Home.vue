@@ -4,7 +4,7 @@
   <div class="home">
     <a href="#">
       <img
-        src="../assets/avatar.jpg"
+        src="../assets/avatar.jpeg"
         style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px"
         alt="Steven Dao"
       />
