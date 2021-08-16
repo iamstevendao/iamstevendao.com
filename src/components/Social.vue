@@ -1,11 +1,13 @@
-<!-- Projects -->
+<!-- Social -->
 
 <template>
-  <div class="row">
-    <div class="col-6">Say hello@iamstevendao.com</div>
-    <div class="col-3">View my projects</div>
-    <div class="col-3">Sponsor me</div>
-  </div>
+  <section class="social container">
+    <a class="btn-email" href="mailto:hello@iamstevendao.com">
+      Say <span class="highlight">hello@iamstevendao.com</span>
+    </a>
+    <a href="https://github.com/iamstevendao?ref=iamstevendao.com">View my projects</a>
+    <a href="https://github.com/sponsors/iamstevendao?ref=iamstevendao.com">Become a sponsor</a>
+  </section>
 </template>
 
 <script lang="ts">
@@ -15,4 +17,17 @@ export default class Social extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.social a {
+  padding: 10px;
+}
+.highlight {
+  color: #805de1;
+}
+a.btn-email {
+  text-decoration: none;
+  padding: 10px;
+  border: 0.5px solid hsla(0, 0%, 89%, 0.84);
+  border-radius: 10px;
+}
+</style>

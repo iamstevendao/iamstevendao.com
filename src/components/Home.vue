@@ -2,15 +2,9 @@
 
 <template>
   <main class="home">
-    <section class="intro container">
-      <intro />
-    </section>
-    <section class="projects container">
-      <projects />
-    </section>
-    <section class="social container">
-      <social />
-    </section>
+    <intro />
+    <projects />
+    <social />
   </main>
 </template>
 

@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light dark;
+  --color-white: #fff;
+  --color-blue: #1f7ae0;
+  --color-green: #19af55;
+  --color-purple: #805de1;
+  --color-border: #dde0e4;
+}
+
+@media (prefers-color-scheme: no-preference) {
+}
+/* Apply a light color scheme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --color-link-hover: #248aff;
+    --text-color-dark: #000;
+    --text-color-light: #81878c;
+    --text-color-normal: #2f363f;
+    --bg-dots: #fafafa;
+    --theme-toggler: #805de1;
+    --bg-btn: #fff;
+    --btn-border: hsla(0, 0%, 88.6%, 0.84);
+    --btn-bsdow: #e2e2e2;
+    --color-link: #1f7ae0;
+    --color-hand: #c58c85;
+    --color-email: #805de1;
+    --color-link-focus: #805de1;
+  }
+}
+/* Apply a dark color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #191919;
+    --color-link-hover: #248aff;
+    --text-color-dark: #fff;
+    --text-color-light: #ffffff99;
+    --text-color-normal: #ffffffde;
+    --bg-dots: #1d1d1d;
+    --theme-toggler: #e2ff00;
+    --bg-btn: #3b3b3b;
+    --btn-border: hsl(0deg 0% 23%);
+    --btn-bsdow: #000000a6;
+    --color-link: #3f99ff;
+    --color-hand: #b4836d;
+    --color-email: #e2ff00;
+    --color-link-focus: #e2ff00;
+  }
+}
