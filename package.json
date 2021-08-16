@@ -9,42 +9,44 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit --coverage --coverageReporters=text-lcov | coveralls",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.5.17",
-    "vue-class-component": "^7.0.0",
-    "vue-property-decorator": "^8.0.0"
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.0",
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-e2e-cypress": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
-    "@vue/cli-plugin-unit-jest": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "babel-core": "7.0.0-bridge.0",
-    "coveralls": "^3.0.2",
-    "file-loader": "^3.0.0",
-    "lint-staged": "^8.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "ts-jest": "^24.0.0",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "file-loader": "^4.3.0",
+    "lint-staged": "^9.5.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5",
+    "vue-jest": "^5.0.0-0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.ts": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
+    "*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
       "git add"
     ]

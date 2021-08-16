@@ -1,7 +1,7 @@
 module.exports = {
-  baseUrl: '/',
+  publicPath: '/',
   configureWebpack: {
-    devtool: 'source-map'
+    devtool: 'source-map',
   },
   chainWebpack: (config) => {
     // Add file loader to copy config file to dist
@@ -16,5 +16,5 @@ module.exports = {
         outputPath: '/',
         publicPath: '/',
       });
-  }
-}
+  },
+};

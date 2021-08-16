@@ -1,8 +1,3 @@
 {
-  "supportFile": "tests/e2e/support",
-  "videosFolder": "tests/e2e/videos",
-  "screenshotsFolder": "tests/e2e/screenshots",
-  "integrationFolder": "tests/e2e/specs",
-  "pluginsFile": "tests/e2e/plugins",
-  "video": false
+  "pluginsFile": "tests/e2e/plugins/index.js"
 }

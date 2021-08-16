@@ -1,36 +1,37 @@
 <!-- Home -->
 
 <template>
-  <div class="home">
-    <a href="#">
-      <img
-        src="../assets/avatar.jpeg"
-        style="border-radius: 50%; width: 25%; min-width: 80px; max-width: 180px"
-        alt="Steven Dao"
-      />
-    </a>
-    <h1>Hi, I'm Steven Dao.</h1>
-    <p>
-      I'm building
-      <a href="https://geteducation.link" target="_blank" rel="noopener">EducationLink</a>
-      with the most awesome people on Earth.
-    </p>
-    <p>
-      I create, maintain open source projects <br />
-      and am a bit obsessed with dogs and cats.
-    </p>
-    <div style="margin-top: 20px">
-      <strong>Find me at</strong>
-      <a href="https://github.com/iamstevendao" rel="noopener" style="display: block;margin-top: 5px;">Github</a>
-    </div>
-  </div>
+  <main class="home">
+    <section class="intro container">
+      <intro />
+    </section>
+    <section class="projects container">
+      <projects />
+    </section>
+    <section class="social container">
+      <social />
+    </section>
+  </main>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
+import Projects from './Projects.vue';
+import Social from './Social.vue';
+import Intro from './Intro.vue';
 
-@Component
-export default class Home extends Vue {
-  @Prop() private msg!: string;
-}
+@Options({
+  components: {
+    Projects,
+    Social,
+    Intro,
+  },
+})
+export default class Home extends Vue { }
 </script>
+
+<style>
+.home {
+  padding-top: 2rem;
+}
+</style>

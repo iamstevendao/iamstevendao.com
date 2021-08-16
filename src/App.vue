@@ -1,17 +1,15 @@
 <template>
-  <div id="app">
-    <home/>
-  </div>
+  <home />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 import Home from './components/Home.vue';
 
-@Component({
+@Options({
   components: {
     Home,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue { }
 </script>
