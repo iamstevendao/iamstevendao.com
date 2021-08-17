@@ -4,13 +4,13 @@
   <section class="projects container">
     <div class="row">
       <div v-for="project in projects" :key="project.name" class="col-6 project">
-        <a :href="project.url">
+        <a :href="`${project.url}?ref=iamstevendao.com`">
           <div class="row">
             <div class="col-3">
-              <img :src="project.img" />
+              <img v-if="project.img" :src="project.img" />
             </div>
             <div class="col-9">
-              <span class="title">{{ project.name }}</span>
+              <strong class="title">{{ project.name }}</strong>
               <span class="description">{{ project.description }}</span>
             </div>
           </div>
@@ -35,41 +35,45 @@ export default class Projects extends Vue {
     },
     {
       name: 'vue-suggestion',
-      url: 'https://iamstevendao.github.io/vue-tel-input',
-      description: 'International Telephone Input with Vue',
-      img: require('../assets/vue-tel-input.png'),
+      url: 'https://iamstevendao.github.io/vue-suggestion/',
+      description: 'Suggestion List Input with Vue',
+      img: require('../assets/vue-suggestion.png'),
     },
     {
       name: 'meteor-google-cloud',
-      url: 'https://iamstevendao.github.io/vue-tel-input',
+      url: 'https://github.com/edvisor-io/meteor-google-cloud',
       description: 'Automate Meteor deployments on Google Cloud App Engine Flexible',
-      img: require('../assets/vue-tel-input.png'),
     },
     {
       name: 'alfred-open-with-vscode',
-      url: 'https://iamstevendao.github.io/vue-tel-input',
+      url: 'https://github.com/iamstevendao/alfred-open-with-vscode',
       description: 'Alfred workflow for opening a folder with VS Code',
-      img: require('../assets/vue-tel-input.png'),
     },
     {
       name: 'alfred-open-with-sublime-merge',
-      url: 'https://iamstevendao.github.io/vue-tel-input',
-      description: 'International Telephone Input with Vue',
-      img: require('../assets/vue-tel-input.png'),
+      url: 'https://github.com/iamstevendao/alfred-open-with-sublime-merge',
+      description: 'Alfred workflow for opening a git folder with Sublime Merge',
     },
   ];
 }
 </script>
 
-<style scoped>
-.project img {
-  width: 90%;
-  border-radius: 8px;
-}
-.project span.title {
-  display: block;
-}
-.project span.description {
-  display: block;
+<style lang="scss" scoped>
+.project {
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .title {
+    color: var(--text-color-normal);
+    display: block;
+  }
+  .description {
+    color: var(--text-color-light);
+    display: block;
+  }
 }
 </style>
