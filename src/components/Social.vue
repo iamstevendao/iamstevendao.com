@@ -17,17 +17,22 @@ export default class Social extends Vue {
 }
 </script>
 
-<style scoped>
-.social a {
-  padding: 10px;
-}
-.highlight {
-  color: #805de1;
-}
-a.btn-email {
-  text-decoration: none;
-  padding: 10px;
-  border: 0.5px solid hsla(0, 0%, 89%, 0.84);
-  border-radius: 10px;
+<style lang="scss" scoped>
+.social {
+  a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-color-normal);
+
+    &.btn-email {
+      text-decoration: none;
+      padding: 10px;
+      border: 0.5px solid var(--btn-border);
+      border-radius: 10px;
+    }
+  }
+  .highlight {
+    color: #805de1;
+  }
 }
 </style>
