@@ -16,7 +16,14 @@
           </div>
         </a>
       </div>
-      <div class="col-3">View more at</div>
+      <div class="col-6">
+        <span class="center view-more"
+          >View more at
+          <a href="https://github.com/iamstevendao?ref=iamstevendao.com">
+            github/iamstevendao</a
+          ></span
+        >
+      </div>
     </div>
   </section>
 </template>
@@ -31,27 +38,30 @@ export default class Projects extends Vue {
       name: 'vue-tel-input',
       url: 'https://iamstevendao.github.io/vue-tel-input',
       description: 'International Telephone Input with Vue',
-      img: require('../assets/vue-tel-input.png'),
+      img: require('../assets/projects/vue-tel-input.png'),
     },
     {
       name: 'vue-suggestion',
       url: 'https://iamstevendao.github.io/vue-suggestion/',
       description: 'Suggestion List Input with Vue',
-      img: require('../assets/vue-suggestion.png'),
+      img: require('../assets/projects/vue-suggestion.png'),
     },
     {
       name: 'meteor-google-cloud',
       url: 'https://github.com/edvisor-io/meteor-google-cloud',
+      img: require('../assets/projects/meteor-google-cloud.png'),
       description: 'Automate Meteor deployments on Google Cloud App Engine Flexible',
     },
     {
       name: 'alfred-open-with-vscode',
       url: 'https://github.com/iamstevendao/alfred-open-with-vscode',
+      img: require('../assets/projects/alfred-open-with-vscode.png'),
       description: 'Alfred workflow for opening a folder with VS Code',
     },
     {
       name: 'alfred-open-with-sublime-merge',
       url: 'https://github.com/iamstevendao/alfred-open-with-sublime-merge',
+      img: require('../assets/projects/alfred-open-with-sublime-merge.png'),
       description: 'Alfred workflow for opening a git folder with Sublime Merge',
     },
   ];
@@ -59,12 +69,15 @@ export default class Projects extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.project {
+.projects {
   a {
     text-decoration: none;
   }
   img {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 70px;
     border-radius: 8px;
   }
   .title {
@@ -73,6 +86,10 @@ export default class Projects extends Vue {
   }
   .description {
     color: var(--text-color-light);
+    display: block;
+  }
+  .view-more {
+    padding-top: 20px;
     display: block;
   }
 }
