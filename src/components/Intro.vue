@@ -4,15 +4,15 @@
   <section class="intro container">
     <div class="row">
       <div class="col-12">
-        <img src="../assets/avatar.jpeg" style="border-radius: 50%; width: 60px" alt="Steven Dao" />
+        <img src="../assets/avatar.png" style="border-radius: 50%; width: 60px" alt="Steven Dao" />
       </div>
       <div class="col-12">
-        <h1 class="name">Hi, I'm Steven Dao.</h1>
+        <h1 class="name">Steven Dao</h1>
         <h2 class="role">Technical Lead/Full Stack Dev & Ailurophilic Cynophilist</h2>
         <p>
           I work at
-          <a href="https://edvisor.io?ref=iamstevendao.com" target="_blank" rel="noopener"
-            >Edvisor</a
+          <a href="https://edvisor.io?ref=iamstevendao.com" target="_blank" rel="noopener">
+            Edvisor</a
           >
           to streamline international education for everyone.
         </p>
