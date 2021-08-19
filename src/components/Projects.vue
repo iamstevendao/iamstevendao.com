@@ -2,21 +2,23 @@
 
 <template>
   <section class="projects container">
-    <div class="row">
-      <div v-for="project in projects" :key="project.name" class="col-6 project">
-        <a :href="`${project.url}?ref=iamstevendao.com`">
-          <div class="row">
-            <div class="col-3">
-              <img v-if="project.img" :src="project.img" />
+    <div class="pure-g">
+      <div v-for="project in projects" :key="project.name" class="pure-u-1-2">
+        <div class="project">
+          <a :href="`${project.url}?ref=iamstevendao.com`">
+            <div class="pure-g">
+              <div class="pure-u-1-4">
+                <img v-if="project.img" :src="project.img" />
+              </div>
+              <div class="pure-u-3-4">
+                <strong class="title">{{ project.name }}</strong>
+                <span class="description">{{ project.description }}</span>
+              </div>
             </div>
-            <div class="col-9">
-              <strong class="title">{{ project.name }}</strong>
-              <span class="description">{{ project.description }}</span>
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-      <div class="col-6">
+      <div class="pure-u-1-2">
         <span class="center view-more"
           >View more at
           <a href="https://github.com/iamstevendao?ref=iamstevendao.com">
@@ -70,9 +72,14 @@ export default class Projects extends Vue {
 
 <style lang="scss" scoped>
 .projects {
+  .project {
+    padding: 15px;
+  }
+
   a {
     text-decoration: none;
   }
+
   img {
     display: block;
     margin: 0 auto;
@@ -80,14 +87,17 @@ export default class Projects extends Vue {
     max-height: 70px;
     border-radius: 8px;
   }
+
   .title {
     color: var(--text-color-normal);
     display: block;
   }
+
   .description {
     color: var(--text-color-light);
     display: block;
   }
+
   .view-more {
     padding-top: 20px;
     display: block;
