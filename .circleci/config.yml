@@ -10,7 +10,7 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
 
       - run:
           name: Installing dependencies
@@ -30,13 +30,6 @@ jobs:
           name: Running unit tests
           command: npm run test:unit
 
-      - run:
-          name: Running e2e tests
-          command: npm run test:e2e -- --headless
-
-      - store_artifacts:
-          path: tests/e2e/screenshots
-
   deploy:
     docker:
       - image: cypress/base:8
@@ -46,7 +39,7 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum ".circleci/config.yml" }}
 
       - run:
           name: Installing dependencies
