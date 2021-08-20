@@ -56,6 +56,7 @@ export default class Social extends Vue {
     color: var(--text-color-light);
     display: block;
     margin-top: 10px;
+    margin-right: 15px;
   }
 }
 </style>
