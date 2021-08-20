@@ -84,10 +84,8 @@ export default class Social extends Vue {
   margin: 0;
   font-weight: 300;
 }
-.intro p {
-  font-size: 1.3rem;
-}
 button.theme {
+  cursor: pointer;
   fill: var(--color-highlight);
   stroke: var(--color-highlight);
   background-color: var(--bg-btn);

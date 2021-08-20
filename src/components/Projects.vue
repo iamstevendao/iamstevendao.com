@@ -73,11 +73,15 @@ export default class Projects extends Vue {
 <style lang="scss" scoped>
 .projects {
   .project {
-    padding: 15px;
+    padding: 15px 0;
   }
 
   a {
     text-decoration: none;
+  }
+
+  a:hover .title {
+    color: var(--color-link-focus);
   }
 
   img {
