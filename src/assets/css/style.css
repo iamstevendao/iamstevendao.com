@@ -20,10 +20,6 @@ body {
   background-color: var(--bg);
 }
 
-.pure-g [class*='pure-u'] {
-  font-family: 'Open Sans', sans-serif;
-}
-
 /* ROOT FONT STYLES */
 
 * {

@@ -2,11 +2,11 @@
 
 <template>
   <section class="intro container">
-    <div class="pure-g">
-      <div class="pure-u-1-1">
+    <div class="row">
+      <div class="col-12">
         <img src="../assets/avatar.png" style="border-radius: 50%; width: 60px" alt="Steven Dao" />
       </div>
-      <div class="pure-u-1-1">
+      <div class="col-12">
         <h1 class="name">Steven Dao</h1>
         <h2 class="role">Technical Lead/Full Stack Dev & Ailurophilic Cynophilist</h2>
         <p>

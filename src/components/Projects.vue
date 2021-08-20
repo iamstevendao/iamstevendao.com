@@ -2,15 +2,15 @@
 
 <template>
   <section class="projects container">
-    <div class="pure-g">
-      <div v-for="project in projects" :key="project.name" class="pure-u-1-2">
+    <div class="row">
+      <div v-for="project in projects" :key="project.name" class="col-md-6 col-12">
         <div class="project">
           <a :href="`${project.url}?ref=iamstevendao.com`">
-            <div class="pure-g">
-              <div class="pure-u-1-4">
+            <div class="row">
+              <div class="col-3">
                 <img v-if="project.img" :src="project.img" />
               </div>
-              <div class="pure-u-3-4">
+              <div class="col-9">
                 <strong class="title">{{ project.name }}</strong>
                 <span class="description">{{ project.description }}</span>
               </div>
@@ -18,7 +18,7 @@
           </a>
         </div>
       </div>
-      <div class="pure-u-1-2">
+      <div class="col-md-6 col-12">
         <span class="center view-more"
           >View more at
           <a href="https://github.com/iamstevendao?ref=iamstevendao.com">
@@ -99,7 +99,7 @@ export default class Projects extends Vue {
   }
 
   .view-more {
-    padding-top: 20px;
+    padding: 20px;
     display: block;
   }
 }
