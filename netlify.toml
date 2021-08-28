@@ -6,4 +6,5 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com cdn.jsdelivr.net 'unsafe-inline';connect-src api.github.com api.npmjs.org;script-src 'unsafe-inline'"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com cdn.jsdelivr.net 'unsafe-inline';connect-src api.github.com api.npmjs.org;script-src 'self' www.googletagmanager.com"
