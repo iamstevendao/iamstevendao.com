@@ -8,7 +8,13 @@
           <a :href="`${project.url}?ref=iamstevendao.com`">
             <div class="row">
               <div class="col-3">
-                <img v-if="project.img" :src="project.img" />
+                <img
+                  v-if="project.img"
+                  :src="project.img"
+                  :alt="project.name"
+                  width="100"
+                  height="100"
+                />
               </div>
               <div class="col-9">
                 <strong class="title">{{ project.name }}</strong>

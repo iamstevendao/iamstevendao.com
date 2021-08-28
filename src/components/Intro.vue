@@ -7,7 +7,7 @@
         <img src="../assets/avatar.png" style="width: 60px" alt="Steven Dao" />
       </div>
       <div class="col-2">
-        <button class="theme" @click="toggleTheme">
+        <button class="theme" @click="toggleTheme" aria-label="Theme Toggler">
           <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
             <path
               v-if="userTheme === 'dark'"
