@@ -148,7 +148,7 @@ export default class Projects extends Vue {
   img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 70px;
     max-height: 70px;
     border-radius: 8px;
   }

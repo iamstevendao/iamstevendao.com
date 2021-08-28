@@ -4,7 +4,7 @@
   <section class="intro container">
     <div class="row">
       <div class="col-10">
-        <img src="../assets/avatar.png" style="width: 60px" alt="Steven Dao" />
+        <img src="../assets/avatar.png" width="60" height="60" alt="Steven Dao" />
       </div>
       <div class="col-2">
         <button class="theme" @click="toggleTheme" aria-label="Theme Toggler">
