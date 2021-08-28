@@ -13,6 +13,12 @@
               <div class="col-9">
                 <strong class="title">{{ project.name }}</strong>
                 <span class="description">{{ project.description }}</span>
+                <div class="counts">
+                  <span v-if="project.nStars">&#9733; {{ project.nStars }}</span>
+                  <span v-if="project.nDownloads">
+                    &#183; {{ project.nDownloads.toLocaleString() }} monthly downloads
+                  </span>
+                </div>
               </div>
             </div>
           </a>
@@ -41,24 +47,39 @@ export default class Projects extends Vue {
       url: 'https://iamstevendao.github.io/vue-tel-input',
       description: 'International Telephone Input with Vue',
       img: require('../assets/projects/vue-tel-input.png'),
+      repo: 'vue-tel-input',
+      user: 'iamstevendao',
+      nStars: 0,
+      nDownloads: 1,
     },
     {
       name: 'vue-suggestion',
       url: 'https://iamstevendao.github.io/vue-suggestion/',
       description: 'Suggestion List Input with Vue',
       img: require('../assets/projects/vue-suggestion.png'),
+      repo: 'vue-suggestion',
+      user: 'iamstevendao',
+      nStars: 0,
+      nDownloads: 1,
     },
     {
       name: 'meteor-google-cloud',
       url: 'https://github.com/edvisor-io/meteor-google-cloud',
       img: require('../assets/projects/meteor-google-cloud.png'),
       description: 'Automate Meteor deployments on Google Cloud App Engine Flexible',
+      repo: 'meteor-google-cloud',
+      user: 'edvisor-io',
+      nStars: 0,
+      nDownloads: 1,
     },
     {
       name: 'alfred-open-with-vscode',
       url: 'https://github.com/iamstevendao/alfred-open-with-vscode',
       img: require('../assets/projects/alfred-open-with-vscode.png'),
       description: 'Alfred workflow for opening a folder with VS Code',
+      repo: 'alfred-open-with-vscode',
+      user: 'iamstevendao',
+      nStars: 0,
     },
     {
       name: 'alfred-open-with-sublime-merge',
@@ -67,6 +88,40 @@ export default class Projects extends Vue {
       description: 'Alfred workflow for opening a git folder with Sublime Merge',
     },
   ];
+
+  mounted(): void {
+    this.projects.forEach(({ user, repo, nDownloads }, index) => {
+      if (!user || !repo) {
+        return;
+      }
+
+      fetch(`https://api.github.com/repos/${user}/${repo}`)
+        .then(async (response) => {
+          const data = await response.json();
+
+          if (!response.ok || !data) {
+            return;
+          }
+
+          this.projects[index].nStars = data.stargazers_count;
+        });
+
+      if (!nDownloads) {
+        return;
+      }
+
+      fetch(`https://api.npmjs.org/downloads/point/last-month/${repo}`)
+        .then(async (response) => {
+          const data = await response.json();
+
+          if (!response.ok || !data) {
+            return;
+          }
+
+          this.projects[index].nDownloads = data.downloads;
+        });
+    });
+  }
 }
 </script>
 
@@ -100,6 +155,11 @@ export default class Projects extends Vue {
   .description {
     color: var(--text-color-light);
     display: block;
+  }
+
+  .counts {
+    color: var(--text-color-normal);
+    margin-top: 5px;
   }
 
   .view-more {
