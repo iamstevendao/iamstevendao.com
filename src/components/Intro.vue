@@ -28,7 +28,11 @@
       </div>
       <div class="col-12">
         <h1 class="name">Steven Dao</h1>
-        <h2 class="role">Technical Lead/Full Stack Dev & Ailurophilic Cynophilist</h2>
+        <h2 class="role">
+          Technical Lead/Full Stack Dev &
+          <span class="tooltip">Ailurophilic&nbsp;<span class="tooltip-text">🐱</span></span>
+          <span class="tooltip">Cynophilist<span class="tooltip-text">🐶</span></span>
+        </h2>
         <p>
           I work at
           <a href="https://edvisor.io?ref=iamstevendao.com" target="_blank" rel="noopener">
@@ -75,15 +79,17 @@ export default class Social extends Vue {
 }
 </script>
 
-<style scoped>
-.intro h1.name {
+<style lang="scss" scoped>
+h1.name {
   margin: 0;
   font-weight: 500;
 }
-.intro h2.role {
+
+h2.role {
   margin: 0;
   font-weight: 300;
 }
+
 button.theme {
   cursor: pointer;
   fill: var(--color-highlight);
@@ -94,5 +100,28 @@ button.theme {
   border: none;
   margin-top: 20px;
   border-radius: 50%;
+}
+
+.tooltip {
+  position: relative;
+
+  .tooltip-text {
+    visibility: hidden;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: -25px;
+  }
+
+  &:hover {
+    color: var(--color-highlight);
+
+    .tooltip-text {
+      visibility: visible;
+    }
+  }
 }
 </style>
