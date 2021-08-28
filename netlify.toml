@@ -8,4 +8,4 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com cdn.jsdelivr.net 'unsafe-inline';connect-src api.github.com api.npmjs.org;script-src 'self' www.googletagmanager.com 'unsafe-inline'"
+    Content-Security-Policy = "default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com cdn.jsdelivr.net 'unsafe-inline';connect-src api.github.com api.npmjs.org;script-src 'self' www.googletagmanager.com"
