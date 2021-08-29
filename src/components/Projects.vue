@@ -12,8 +12,8 @@
                   v-if="project.img"
                   :src="project.img"
                   :alt="project.name"
-                  width="100"
-                  height="100"
+                  width="70"
+                  height="70"
                 />
               </div>
               <div class="col-9">
@@ -150,6 +150,7 @@ export default class Projects extends Vue {
     margin: 0 auto;
     max-width: 70px;
     max-height: 70px;
+    width: 100%;
     border-radius: 8px;
   }
 
