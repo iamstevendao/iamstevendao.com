@@ -4,7 +4,7 @@
   <main class="home">
     <intro />
     <projects />
-    <social class="social" />
+    <social />
   </main>
 </template>
 
@@ -24,12 +24,8 @@ import Intro from './Intro.vue';
 export default class Home extends Vue { }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .home {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  .social {
-    padding-top: 30px;
-  }
+  @apply max-w-2xl mx-auto py-8;
 }
 </style>

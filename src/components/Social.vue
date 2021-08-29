@@ -3,18 +3,18 @@
 <template>
   <section class="container">
     <div class="social-item">
-      <a class="btn btn-email block" href="mailto:hello@iamstevendao.com">
+      <a class="btn btn-email bg-highlight" href="mailto:hello@iamstevendao.com">
         Say <span class="highlight">hello@iamstevendao.com</span>
       </a>
       <span class="center description">Want to collaborate? Let's talk!</span>
     </div>
     <div class="social-item">
-      <a class="btn" href="https://github.com/sponsors/iamstevendao?ref=iamstevendao.com"
+      <a class="btn text-link" href="https://github.com/sponsors/iamstevendao?ref=iamstevendao.com"
         >Become a sponsor</a
       >
     </div>
     <div class="social-item">
-      <a class="btn" href="https://github.com/iamstevendao?ref=iamstevendao.com"
+      <a class="btn text-link" href="https://github.com/iamstevendao?ref=iamstevendao.com"
         >View my projects</a
       >
     </div>
@@ -43,10 +43,8 @@ a {
   }
 
   &.btn-email {
-    color: var(--text-color-normal);
     text-decoration: none;
     border-radius: 15px;
-    background-color: var(--bg-btn);
     text-align: center;
   }
 }

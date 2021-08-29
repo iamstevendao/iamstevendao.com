@@ -2,12 +2,12 @@
 
 <template>
   <section class="projects container">
-    <div class="row">
-      <div v-for="project in projects" :key="project.name" class="col-md-6 col-12">
+    <div class="flex flex-wrap">
+      <div v-for="project in projects" :key="project.name" class="md:w-1/2 sm:w-full">
         <div class="project">
           <a :href="`${project.url}?ref=iamstevendao.com`">
-            <div class="row">
-              <div class="col-3">
+            <div class="flex flex-wrap">
+              <div class="w-1/4">
                 <img
                   v-if="project.img"
                   :src="project.img"
@@ -16,10 +16,10 @@
                   height="70"
                 />
               </div>
-              <div class="col-9">
-                <strong class="title">{{ project.name }}</strong>
-                <span class="description">{{ project.description }}</span>
-                <div class="counts">
+              <div class="w-3/4">
+                <h3>{{ project.name }}</h3>
+                <span class="text-light">{{ project.description }}</span>
+                <div class="mt-0.5">
                   <span v-if="project.nStars">&#9733; {{ project.nStars }}</span>
                   <span v-if="project.nDownloads > 1">
                     &#183; {{ project.nDownloads.toLocaleString() }} monthly downloads
@@ -30,10 +30,10 @@
           </a>
         </div>
       </div>
-      <div class="col-md-6 col-12">
+      <div class="md:w-1/2 sm:w-full">
         <span class="center view-more"
           >View more at
-          <a href="https://github.com/iamstevendao?ref=iamstevendao.com">
+          <a href="https://github.com/iamstevendao?ref=iamstevendao.com" class="text-link">
             github/iamstevendao</a
           ></span
         >
@@ -132,46 +132,29 @@ export default class Projects extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.projects {
-  .project {
-    padding: 15px 0;
-  }
+.project {
+  padding: 15px 0;
+}
 
-  a {
-    text-decoration: none;
-  }
+a:hover .title {
+  color: var(--color-link-focus);
+}
 
-  a:hover .title {
-    color: var(--color-link-focus);
-  }
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 70px;
+  max-height: 70px;
+  width: 100%;
+  border-radius: 8px;
+}
 
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 70px;
-    max-height: 70px;
-    width: 100%;
-    border-radius: 8px;
-  }
+.counts {
+  margin-top: 5px;
+}
 
-  .title {
-    color: var(--text-color-normal);
-    display: block;
-  }
-
-  .description {
-    color: var(--text-color-light);
-    display: block;
-  }
-
-  .counts {
-    color: var(--text-color-normal);
-    margin-top: 5px;
-  }
-
-  .view-more {
-    padding: 20px;
-    display: block;
-  }
+.view-more {
+  padding: 20px;
+  display: block;
 }
 </style>

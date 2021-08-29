@@ -1,8 +1,6 @@
 import './config/robots.txt'; // For Google bot to crawl the web
 import './config/sitemap.xml'; // Sitemap
-import './assets/css/bootstrap-grid.min.css';
-import './assets/css/theme.css';
-import './assets/css/style.css';
+import './assets/css/index.css';
 
 import { createApp } from 'vue';
 import App from './App.vue';
