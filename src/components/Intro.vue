@@ -82,7 +82,7 @@ export default class Social extends Vue {
 <style lang="scss" scoped>
 h1.name {
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h2.role {
