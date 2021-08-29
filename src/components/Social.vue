@@ -1,7 +1,7 @@
 <!-- Social -->
 
 <template>
-  <section class="social container">
+  <section class="container">
     <div class="social-item">
       <a class="btn btn-email block" href="mailto:hello@iamstevendao.com">
         Say <span class="highlight">hello@iamstevendao.com</span>
@@ -29,33 +29,44 @@ export default class Social extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.social {
-  a {
-    text-decoration: none;
+.container {
+  display: flex;
+  flex-direction: column;
+}
 
-    &.btn {
-      padding: 15px;
-      display: block;
-    }
+a {
+  text-decoration: none;
 
-    &.btn-email {
-      color: var(--text-color-normal);
-      text-decoration: none;
-      border-radius: 15px;
-      margin-right: 15px;
-      background-color: var(--bg-btn);
-    }
-  }
-
-  .social-item {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .description {
-    color: var(--text-color-light);
+  &.btn {
+    padding: 15px;
     display: block;
-    margin-top: 10px;
+  }
+
+  &.btn-email {
+    color: var(--text-color-normal);
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: var(--bg-btn);
+    text-align: center;
+  }
+}
+
+.social-item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.description {
+  color: var(--text-color-light);
+  display: block;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 33.75em) {
+  .container {
+    flex-direction: row;
+  }
+  .social-item:first-of-type {
     margin-right: 15px;
   }
 }
