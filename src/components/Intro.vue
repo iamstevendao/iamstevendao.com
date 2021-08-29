@@ -100,6 +100,7 @@ button.theme {
   border: none;
   margin-top: 20px;
   border-radius: 50%;
+  padding: 8px;
 }
 
 .tooltip {
