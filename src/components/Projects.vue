@@ -21,7 +21,7 @@
                 <span class="description">{{ project.description }}</span>
                 <div class="counts">
                   <span v-if="project.nStars">&#9733; {{ project.nStars }}</span>
-                  <span v-if="project.nDownloads">
+                  <span v-if="project.nDownloads > 1">
                     &#183; {{ project.nDownloads.toLocaleString() }} monthly downloads
                   </span>
                 </div>
