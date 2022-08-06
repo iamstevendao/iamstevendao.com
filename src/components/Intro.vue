@@ -33,14 +33,7 @@
           <span class="tooltip">Ailurophilic&nbsp;<span class="tooltip-text">🐱</span></span>
           <span class="tooltip">Cynophilist<span class="tooltip-text">🐶</span></span>
         </h2>
-        <p>
-          I work at
-          <a href="https://edvisor.io?ref=iamstevendao.com" target="_blank" rel="noopener">
-            Edvisor</a
-          >
-          to streamline international education for everyone.
-        </p>
-        <p>I also make some open-source packages, mostly in Vue, Meteor & Alfred.</p>
+        <p>I make some open-source packages, mostly in Vue, Meteor & Alfred.</p>
       </div>
     </div>
   </section>
