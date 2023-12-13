@@ -50,28 +50,30 @@ export default function Projects() {
   ];
 
   return (
-    <section className="flex flex-wrap flex-col gap-4 md:flex-row md:gap-0">
+    <section className="grid gap-8 grid-cols-1 md:grid-cols-2">
       {projects.map((project) => (
         <a
-          className="flex md:flex-[50%] gap-4"
+          className="flex gap-8"
           href={`${project.url}?ref=iamstevendao.com`}
           key={project.name}
-
         >
-          <Image
-            src={project.img}
-            alt={project.name}
-            width={70}
-            height={70}
-            priority
-          />
+          <div className="min-w-[70px]">
+            <Image
+              src={project.img}
+              alt={project.name}
+              width={70}
+              height={70}
+              priority
+            />
+          </div>
           <div className="flex flex-col">
-            <h1>{project.name}</h1>
+            <h2 className="font-medium">{project.name}</h2>
+            <span className="text-gray-400">{project.description}</span>
           </div>
         </a>
       ))}
-      <div className="flex md:flex-[50%]">
-        View more at <a href="https://github.com/iamstevendao?ref=iamstevendao.com">github/iamstevendao</a>
+      <div className="">
+        View more at&nbsp;<a className="text-sky-500" href="https://github.com/iamstevendao?ref=iamstevendao.com">github/iamstevendao</a>
       </div>
     </section >
   )
