@@ -9,8 +9,8 @@ export default function Projects() {
       img: '/vue-tel-input.png',
       repo: 'vue-tel-input',
       user: 'iamstevendao',
-      nStars: 0,
-      nDownloads: 1,
+      nStars: 684,
+      nDownloads: 355874,
     },
     {
       name: 'vue-suggestion',
@@ -19,8 +19,8 @@ export default function Projects() {
       img: '/vue-suggestion.png',
       repo: 'vue-suggestion',
       user: 'iamstevendao',
-      nStars: 0,
-      nDownloads: 1,
+      nStars: 64,
+      nDownloads: 5313,
     },
     {
       name: 'meteor-google-cloud',
@@ -29,8 +29,8 @@ export default function Projects() {
       description: 'Automate Meteor deployments on Google Cloud App Engine Flexible',
       repo: 'meteor-google-cloud',
       user: 'edvisor-io',
-      nStars: 0,
-      nDownloads: 1,
+      nStars: 30,
+      nDownloads: 25,
     },
     {
       name: 'alfred-open-with-vscode',
@@ -40,12 +40,15 @@ export default function Projects() {
       repo: 'alfred-open-with-vscode',
       user: 'iamstevendao',
       nStars: 0,
+      nDownloads: 0,
     },
     {
       name: 'alfred-open-with-sublime-merge',
       url: 'https://github.com/iamstevendao/alfred-open-with-sublime-merge',
       img: '/alfred-open-with-sublime-merge.png',
       description: 'Alfred workflow for opening a git folder with Sublime Merge',
+      nStars: 0,
+      nDownloads: 0,
     },
   ];
 
@@ -69,6 +72,12 @@ export default function Projects() {
           <div className="flex flex-col">
             <h2 className="font-medium">{project.name}</h2>
             <span className="text-gray-400">{project.description}</span>
+            <div className="text-sm">
+              {project.nStars > 0 && <span v-if="project.nStars">&#9733; {project.nStars}</span>}
+              {project.nDownloads > 1 && <span>
+                &nbsp;&#183;&nbsp;&#11015; {project.nDownloads.toLocaleString()} monthly
+              </span>}
+            </div>
           </div>
         </a>
       ))}
