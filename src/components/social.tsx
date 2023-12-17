@@ -2,8 +2,8 @@ export default function Social() {
   return (
     <section className="flex gap-4 flex-col md:flex-row">
       <div className="flex flex-col gap-1 align-center">
-        <a className="text-center bg-gray-700 py-3 px-4 rounded-xl" href="mailto:hello@iamstevendao.com">
-          Say&nbsp;<span className="text-amber-100">hello@iamstevendao.com</span>
+        <a className="text-center bg-zinc-100 dark:bg-slate-500 py-3 px-4 rounded-xl" href="mailto:hello@iamstevendao.com">
+          Say&nbsp;<span className="text-violet-500 dark:text-yellow-200">hello@iamstevendao.com</span>
         </a>
         <span className="text-center">Want to collaborate? Let's talk!</span>
       </div>
