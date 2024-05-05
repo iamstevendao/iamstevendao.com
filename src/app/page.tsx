@@ -1,3 +1,5 @@
+'use-client'
+
 import Intro from '@/components/intro'
 import Projects from '@/components/projects'
 import Social from '@/components/social'
