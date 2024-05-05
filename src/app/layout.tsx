@@ -7,9 +7,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Steven Dao',
   description: 'Technical Lead/Full Stack Dev',
-  icons: {
-    icon: '/favicon.ico',
-  },
+  icons: '/favicon.ico',
 }
 
 export default function RootLayout({
