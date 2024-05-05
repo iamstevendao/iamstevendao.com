@@ -47,7 +47,6 @@ export default function Projects() {
     const fetchRepoStats = async () => {
       const repoStatsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/repo-stats`);
       const { repoStats } = await repoStatsResponse.json();
-      console.log('repoStats: ', repoStats)
       setRepoStats(repoStats);
     };
 
