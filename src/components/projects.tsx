@@ -56,14 +56,14 @@ export default function Projects() {
   const projects = [
     {
       name: 'vue-tel-input',
-      url: 'https://iamstevendao.github.io/vue-tel-input',
+      url: 'https://iamstevendao.com/vue-tel-input/',
       description: 'International Telephone Input with Vue',
       img: '/vue-tel-input.png',
       repo: 'iamstevendao/vue-tel-input',
     },
     {
       name: 'vue-suggestion',
-      url: 'https://iamstevendao.github.io/vue-suggestion/',
+      url: 'https://iamstevendao.com/vue-suggestion/',
       description: 'Suggestion List Input with Vue',
       img: '/vue-suggestion.png',
       repo: 'iamstevendao/vue-suggestion',
