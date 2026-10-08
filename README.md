@@ -1,5 +1,11 @@
 # iamstevendao.com
 
-[![Coverage Status](https://coveralls.io/repos/github/iamstevendao/iamstevendao.com/badge.svg?branch=master)](https://coveralls.io/github/iamstevendao/iamstevendao.com?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/iamstevendao/iamstevendao.com.svg)](https://greenkeeper.io/)
+Bun + Vite + React + shadcn/ui, deployed to Cloudflare Workers static assets.
+
+```bash
+bun install
+bun run dev
+bun run deploy   # build + wrangler deploy
+```
 
 made with &#x2764; by [Steven](https://github.com/iamstevendao).
