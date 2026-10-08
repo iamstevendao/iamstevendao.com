@@ -97,8 +97,8 @@ export function Home() {
                 >
                   <img src={p.img} alt="" className="size-8 flex-none rounded-md" />
                   <span className="flex-1 truncate">
-                    <span className="font-medium">{p.name}</span>
-                    <span className="hidden text-muted-foreground sm:inline"> — {p.description}</span>
+                    <span className="font-medium">{p.name}</span>{' '}
+                    <span className="ms-1 hidden text-muted-foreground sm:inline">{p.description}</span>
                   </span>
                   <span className="flex flex-none gap-3 font-mono text-xs text-muted-foreground tabular-nums">
                     {stats[p.name]?.stars !== undefined && (

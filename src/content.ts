@@ -21,7 +21,7 @@ export const speakeroo = {
   name: 'Speakeroo',
   tagline: 'Free AI Speaking Coach',
   pitch:
-    'Practice speaking English out loud and get scored feedback on pronunciation, fluency, grammar, vocabulary and confidence — on web and mobile.',
+    'Practice speaking English out loud and get scored feedback on pronunciation, fluency, grammar, vocabulary and confidence, on web and mobile.',
   scores: ['Pronunciation', 'Fluency', 'Grammar', 'Vocabulary', 'Confidence'],
   logo: speakerooLogo,
   owl: speakerooOwl,
