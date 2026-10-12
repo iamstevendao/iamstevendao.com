@@ -12,13 +12,13 @@ export function Home() {
     <div className="grid min-h-dvh lg:h-dvh lg:grid-cols-2">
       <section className="flex flex-col justify-between gap-12 p-[clamp(1.5rem,1rem+3vw,4rem)]">
         <header className="flex items-center justify-between">
-          <img src={me.avatar} alt="" className="size-12 flex-none rounded-full" />
+          <img src={me.avatar} alt={me.name} className="size-12 flex-none rounded-full" />
           <ThemeToggle />
         </header>
 
         <div className="max-w-xl space-y-5 text-[clamp(1.0625rem,0.95rem+0.4vw,1.25rem)] leading-relaxed text-muted-foreground">
           <h1 className="text-[1.4em] leading-tight font-medium tracking-tight text-foreground">
-            Hi, I'm Steven <span aria-hidden>👋</span>
+            Hi, I'm {me.name} <span aria-hidden>👋</span>
           </h1>
           <p>
             I'm a {me.role}. For years I've built web apps and the small open-source pieces that
